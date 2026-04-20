@@ -1,0 +1,19 @@
+Metadata-Version: 2.4
+Name: econtools
+Version: 0.1.0
+Summary: Personal econometrics toolkit wrapping statsmodels, linearmodels, scipy, pandas
+Requires-Python: >=3.11
+Requires-Dist: statsmodels>=0.14
+Requires-Dist: linearmodels>=7.0
+Requires-Dist: scipy>=1.11
+Requires-Dist: pandas>=2.0
+Requires-Dist: numpy>=1.25
+Requires-Dist: pyarrow>=14.0
+Requires-Dist: matplotlib>=3.8
+Requires-Dist: pydantic>=2.0
+Requires-Dist: rich>=13.0
+Requires-Dist: formulaic>=0.6
+Requires-Dist: patsy>=1.0
+Provides-Extra: dev
+Requires-Dist: pytest>=8.0; extra == "dev"
+Requires-Dist: pytest-cov>=5.0; extra == "dev"
