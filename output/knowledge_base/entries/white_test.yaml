@@ -1,0 +1,17 @@
+id: white_test
+name: White Test
+category: heteroskedasticity
+definition: |
+  Auxiliary regression of $\hat{u}^2$ on regressors, their squares, and
+  cross-products.  $\mathrm{LM} = nR^2_{\text{aux}} \xrightarrow{d} \chi^2(p)$
+  where $p$ is the number of terms in the auxiliary regression.
+  More general than Breusch-Pagan; does not assume a specific skedastic function.
+hypotheses:
+  null: "Homoskedasticity"
+  alternative: "Heteroskedasticity of any form"
+interpretation:
+  reject: "Use robust SEs (HC0–HC3) or WLS with appropriate weights."
+  fail_to_reject: "No evidence against homoskedasticity."
+references:
+  - "White, H. (1980). A Heteroskedasticity-Consistent Covariance Matrix Estimator and a Direct Test for Heteroskedasticity. Econometrica, 48(4), 817–838."
+# TODO(econtools): kb-entry — expand with worked example for {dep_var} ~ {regressors}

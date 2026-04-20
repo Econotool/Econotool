@@ -1,0 +1,16 @@
+id: ols
+name: Ordinary Least Squares
+category: estimator
+definition: |
+  $\hat{\beta} = (X'X)^{-1}X'y$
+  minimises $\sum_{i=1}^n (y_i - x_i'\beta)^2$.
+  Under Gauss-Markov assumptions, OLS is BLUE (Best Linear Unbiased Estimator).
+  For {dep_var} regressed on {regressors}.
+hypotheses:
+  null: "Regression coefficients are jointly zero"
+  alternative: "At least one coefficient is non-zero"
+interpretation:
+  reject: "The model explains significant variation in {dep_var}."
+  fail_to_reject: "No evidence that {regressors} jointly explain {dep_var}."
+references:
+  - "Wooldridge, J. M. (2010). Econometric Analysis of Cross Section and Panel Data (2nd ed.). MIT Press."

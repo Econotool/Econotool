@@ -1,0 +1,18 @@
+id: hausman
+name: Hausman Test (FE vs RE)
+category: panel
+definition: |
+  $H = (\hat{\beta}_{FE} - \hat{\beta}_{RE})'
+       [\mathrm{Var}(\hat{\beta}_{FE}) - \mathrm{Var}(\hat{\beta}_{RE})]^{-1}
+       (\hat{\beta}_{FE} - \hat{\beta}_{RE})
+       \xrightarrow{d} \chi^2(k)$
+  Tests whether individual effects are correlated with regressors.
+hypotheses:
+  null: "Random effects are uncorrelated with regressors (RE is consistent and efficient)"
+  alternative: "Fixed effects are correlated with regressors (use FE)"
+interpretation:
+  reject: "Use Fixed Effects (FE) — RE is inconsistent."
+  fail_to_reject: "Random Effects (RE) is preferred (more efficient)."
+references:
+  - "Hausman, J. A. (1978). Specification Tests in Econometrics. Econometrica, 46(6), 1251–1271."
+# TODO(econtools): kb-entry — add worked example for wagepan.dta

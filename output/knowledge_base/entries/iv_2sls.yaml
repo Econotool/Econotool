@@ -1,0 +1,19 @@
+id: iv_2sls
+name: Two-Stage Least Squares (2SLS)
+category: estimator
+definition: |
+  Stage 1: Regress endogenous $\tilde{x}$ on all exogenous variables $z$:
+    $\hat{x} = Z(Z'Z)^{-1}Z'\tilde{x}$
+  Stage 2: Regress $y$ on $[\hat{x}, x_{\text{exog}}]$:
+    $\hat{\beta}_{2SLS} = ([\hat{X}'\hat{X}])^{-1}[\hat{X}'y]$
+  Instruments $z$ must satisfy: relevance ($\mathrm{Cov}(z, \tilde{x}) \neq 0$)
+  and exclusion ($\mathrm{Cov}(z, u) = 0$).
+hypotheses:
+  null: "Instruments are irrelevant (weak instrument F < 10)"
+  alternative: "Instruments are relevant"
+interpretation:
+  reject: "Instruments are strong — 2SLS is consistent."
+  fail_to_reject: "Weak instruments — 2SLS may have large bias and poor inference."
+references:
+  - "Wooldridge, J. M. (2010). Econometric Analysis of Cross Section and Panel Data. MIT Press."
+  - "Angrist, J. D. & Pischke, J.-S. (2009). Mostly Harmless Econometrics. Princeton University Press."
