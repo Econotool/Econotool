@@ -80,9 +80,7 @@ econtools/
 ├── evaluation/      # statistical tests and diagnostics
 ├── uncertainty/     # covariance estimators and bootstrap
 ├── output/          # tables, figures, LaTeX assembly, knowledge base
-├── sieve/           # specification search
 ├── replication/     # declarative paper-replication helpers (comparison, runner)
-├── knowledge/       # YAML reference notes on identification strategies
 ├── plots/           # Figure-returning plot functions
 ├── data/            # pipeline utilities (load, clean, transform, construct, provenance)
 └── cli/             # command-line entry points
