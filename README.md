@@ -33,9 +33,6 @@ tables and figures without bespoke formatting code per project.
   notes block with column widths aligned via least-common-multiple.
 - **Plots.** Figure-returning functions for residual diagnostics, QQ plots,
   coefficient forests, correlograms, binscatters, and panel event studies.
-- **Specification search.** A sieve module for systematic functional-form
-  and instrument exploration with cross-fitting and a Pareto frontier over
-  fit vs. instrument strength.
 
 ## Installation
 
